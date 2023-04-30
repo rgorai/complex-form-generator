@@ -1,4 +1,3 @@
-// import typescript from 'rollup-plugin-typescript2'
 import typescript from '@rollup/plugin-typescript'
 import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
@@ -26,12 +25,8 @@ export default {
     peerDepsExternal(),
     resolve(),
     commonjs(),
-    // typescript({
-    //   tsconfig: './tsconfig.json',
-    // }),
     typescript({
       declaration: true,
-      declarationDir: 'types',
       rootDir: 'src',
       tsconfig: './tsconfig.json',
     }),

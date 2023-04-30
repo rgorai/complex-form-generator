@@ -1,4 +1,4 @@
-declare global {
+export declare global {
   type Primitives = string | number | boolean
 
   type SeedValue = Primitives | Seed | Seed[]
@@ -11,5 +11,3 @@ declare global {
 
   type Keychain = (string | number)[]
 }
-
-export {}
