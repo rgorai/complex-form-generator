@@ -1,5 +1,13 @@
-@use '../../../mixins' as *;
-@use 'sass:color';
+@mixin flex-display(
+  $direction,
+  $justification: flex-start,
+  $alignment: center
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justification;
+  align-items: $alignment;
+}
 
 $danger-button-color: #d64747;
 
