@@ -1,4 +1,4 @@
-import React, {
+import {
   ReactNode,
   useEffect,
   useState,
@@ -258,7 +258,7 @@ const FormGenerator = <T extends Record<string, any>>(
             )
           } else if (isCodeArea(currKeyword, currVal)) {
             formElements.push(
-              <React.Fragment key={newKeychainStr}>
+              <Fragment key={newKeychainStr}>
                 {currLabel()}
                 <div className={getClassname(cx('mb-3', styles.editorWrapper))}>
                   <Editor
@@ -276,7 +276,7 @@ const FormGenerator = <T extends Record<string, any>>(
                     }}
                   />
                 </div>
-              </React.Fragment>
+              </Fragment>
             )
           } else if (isSelectOptions(currKeyword, currVal)) {
             const assocPayloads: [number, Seed][] = getAssocPayloads(
@@ -367,7 +367,7 @@ const FormGenerator = <T extends Record<string, any>>(
                 const currItem = `${currKey}[${i}]`
                 arrayRefs.current[newKeychainStr] = []
                 return (
-                  <React.Fragment key={i}>
+                  <Fragment key={i}>
                     <div
                       className={cx(styles.headerContainer, {
                         [styles.nestedMargin]: groupNestedObjects,
@@ -413,7 +413,7 @@ const FormGenerator = <T extends Record<string, any>>(
                       seed: currVal[i],
                       keychain: [...newKeychain, i],
                     })}
-                  </React.Fragment>
+                  </Fragment>
                 )
               })}
 
