@@ -1,4 +1,4 @@
-type Keywords = {
+declare global {type Keywords = {
   $useTextArea: Record<string, string>
   $useDateArea: Record<string, string>
   $useCodeArea: Record<
@@ -113,3 +113,6 @@ type MonacoLanguages =
   | 'xml'
   | 'yaml'
   | 'json'
+}
+
+export {}

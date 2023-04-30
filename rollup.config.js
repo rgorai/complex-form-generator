@@ -1,5 +1,5 @@
-import typescript from 'rollup-plugin-typescript2'
-// import typescript from '@rollup/plugin-typescript'
+// import typescript from 'rollup-plugin-typescript2'
+import typescript from '@rollup/plugin-typescript'
 import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
@@ -26,16 +26,15 @@ export default {
     peerDepsExternal(),
     resolve(),
     commonjs(),
-    typescript({
-      declarationDir: 'types',
-      tsconfig: './tsconfig.json',
-    }),
     // typescript({
-    //   declaration: true,
-    //   declarationDir: 'types',
-    //   rootDir: 'src',
     //   tsconfig: './tsconfig.json',
     // }),
+    typescript({
+      declaration: true,
+      declarationDir: 'types',
+      rootDir: 'src',
+      tsconfig: './tsconfig.json',
+    }),
     scss({
       insert: true,
       output: 'dist/styles.css',
