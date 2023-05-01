@@ -273,6 +273,7 @@ const FormGenerator = <T extends Record<string, any>>(
                       minimap: { enabled: false },
                       lineDecorationsWidth: 0,
                       lineNumbersMinChars: 3,
+                      automaticLayout: true,
                     }}
                   />
                 </div>
@@ -289,7 +290,7 @@ const FormGenerator = <T extends Record<string, any>>(
               <div
                 className={getClassname(
                   cx({
-                    [cx('form-control', styles.objectContainer)]:
+                    [cx('mb-4 form-control', styles.objectContainer)]:
                       groupNestedObjects &&
                       currVal._options.find((e) => !!e._assocPayload),
                   })
@@ -542,7 +543,7 @@ const FormGenerator = <T extends Record<string, any>>(
             <hr className={getClassname('mt-4')} />
             <button
               className={getClassname('btn btn-primary')}
-              form="form-generator"
+              form={props.formId ?? 'form-generator'}
               type="submit"
             >
               Submit

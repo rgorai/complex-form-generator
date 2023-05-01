@@ -3,10 +3,11 @@ import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 import { terser } from 'rollup-plugin-terser'
-import scss from 'rollup-plugin-scss'
+import postcss from 'rollup-plugin-postcss'
 
 export default {
   input: 'src/index.tsx',
+  context: 'window',
   output: [
     {
       file: 'dist/index.cjs',
@@ -16,7 +17,7 @@ export default {
     },
     {
       file: 'dist/index.mjs',
-      format: 'es',
+      format: 'esm',
       sourcemap: true,
       exports: 'named',
     },
@@ -30,9 +31,11 @@ export default {
       rootDir: 'src',
       tsconfig: './tsconfig.json',
     }),
-    scss({
-      insert: true,
-      output: 'dist/styles.css',
+    postcss({
+      minimize: true,
+      extract: false,
+      modules: true,
+      use: ['sass'],
     }),
     terser(),
   ],

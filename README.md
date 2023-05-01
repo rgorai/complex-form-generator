@@ -5,6 +5,9 @@ This package allows you to generate a form with a special seed object in React b
 ## Prequisites
 This is a React component, so you will need `"react": ">=18"`. If you want to use the shipped styles, you will need `"bootstrap": ">=5"`.
 
+## Demo
+Please visit <a href="@@@DEMO_SITE" target="_blank" referrerPolicy="no-referrer">my NPM platform</a> to view a demo of this package.
+
 ## Installation
 
 With NPM:
