@@ -1,6 +1,6 @@
 {
   "name": "complex-form-generator",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "Customize and generate React forms for complex payloads",
   "repository": "https://github.com/rgorai/complex-form-generator",
   "author": "Ron Gorai - rgorai",
@@ -30,7 +30,6 @@
   "peerDependencies": {
     "@monaco-editor/react": "^4.5.0",
     "bootstrap": ">=5",
-    "monaco-editor": "^0.37.1",
     "react": ">=18"
   },
   "peerDependenciesMeta": {
@@ -38,6 +37,9 @@
       "optional": false
     },
     "bootstrap": {
+      "optional": true
+    },
+    "@monaco-editor/react": {
       "optional": true
     }
   },
