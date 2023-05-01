@@ -7,7 +7,7 @@ import {
   useRef,
 } from 'react'
 import cx from 'classnames'
-import { Editor } from '@monaco-editor/react'
+import Editor from '@monaco-editor/react'
 import { getValue, setValue } from './utils/objects'
 import styles from './formGenerator.module.scss'
 import {
