@@ -1,6 +1,6 @@
 {
   "name": "complex-form-generator",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "Customize and generate React forms for complex payloads",
   "repository": "https://github.com/rgorai/complex-form-generator",
   "author": "Ron Gorai - rgorai",
