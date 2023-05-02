@@ -1,23 +1,23 @@
 # Complex Form Generator
 
-This package allows you to generate a form with a special seed object in React based on a complex JS object that you need user input for. Object keys of the seed are used as input labels, and each key's value is used to infer the type of input. This means strings, numbers, booleans, nested objects, and certain configurations of nested Arrays are fair game as object value types. Apart from these, there is a seed API to support a handful of custom input types. It also ships with Bootstrap 5 styling.
+This package allows you to generate a form with a special seed object in React based on a complex JS object that you need user input for. Object keys of the seed are used as input labels, and each key's value is used to infer the type of input. This means strings, numbers, booleans, nested objects, and certain configurations of nested arrays are fair game as object value types. Apart from these, there is a seed API to support a handful of custom input types. It also ships with Bootstrap 5 styling.
 
 ## Prequisites
 This is a React component, so you will need `"react": ">=18"`. If you want to use the shipped styles, you will need `"bootstrap": ">=5"`. If you would like to use code editor inputs, you will need `"@monaco-editor/react": "^4.5.0"`.
 
 ## Demo
-Please visit <a href="@@@DEMO_SITE">my NPM platform</a> to view a demo of this package.
+Please visit <a href="https://rgorai-npm-packages.netlify.app/complex-form-generator">my NPM platform</a> to view a demo of this package.
 
 ## Installation
-
-With NPM:
-```
-npm install complex-form-generator
-```
 
 With Yarn:
 ```
 yarn add complex-form-generator
+```
+
+With NPM:
+```
+npm install complex-form-generator
 ```
 
 ## Usage
@@ -32,7 +32,7 @@ Once your seed is written, simply supply it to the FormGenerator component, and 
 ```javascript
 import FormGenerator from 'complex-form-generator'
 
-// optional type specification
+// optional type definition
 type MyPayloadType = {
   name: string
   age: number
@@ -226,7 +226,7 @@ To use the FormGenerator component, simply provide the required seed obejct prop
       <td>&lt;T&gt;</td>
       <td><code>T extends Record&lt;string, any&gt;</code></td>
       <td>any</td>
-      <td>A an optional type definition provided by you to compile a specific type for your payload.</td>
+      <td>An optional type definition provided by you to compile a specific type for your payload.</td>
     </tr>
     <tr>
       <td>seed</td>
@@ -256,7 +256,7 @@ To use the FormGenerator component, simply provide the required seed obejct prop
       <td>suppressStyles</td>
       <td><code>boolean</code></td>
       <td>false</td>
-      <td>Suppresses all styles applied to the form. Disables following props as they will have no effect.</td>
+      <td>Suppresses all styles applied to the form. Disables the following props as they will have no effect.</td>
     </tr>
     <tr>
       <td>floatingLabels</td>
@@ -268,7 +268,7 @@ To use the FormGenerator component, simply provide the required seed obejct prop
       <td>groupNestedChildren</td>
       <td><code>boolean</code></td>
       <td>false</td>
-      <td>Visually groups all nested objects with a card outline. This applies to JS object values, array values, and select values if any option has an associated payload.</td>
+      <td>Visually groups all nested objects with a card outline. This applies to JS object values, array values, and select options values if any of the options has an associated payload.</td>
     </tr>
   </tbody>
 </table>
@@ -278,7 +278,7 @@ Feedback and contribution of any kind is greatly appreciated! If you would like 
 1. Fork it!
 2. Create your feature branch: <code>git checkout -b my-new-feature</code>
 3. Add your changes: <code>git add .</code>
-4. Commit your changes: git <code>commit -m 'Add some feature'</code>
+4. Commit your changes: <code>git commit -m 'Add some feature'</code>
 5. Push the branch: <code>git push origin my-new-feature</code>
 6. Submit a pull request
 
@@ -286,7 +286,7 @@ Feedback and contribution of any kind is greatly appreciated! If you would like 
 - Ron Gorai - <a href="https://github.com/rgorai" target="_blank" referrerPolicy="no-referrer">rgorai</a>: Initial version
 
 ## Future releases
-
 - Input validation
 - Primitive value array support
 - CSS classname API for custom styles
+- dark theme support
