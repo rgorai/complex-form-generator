@@ -7,7 +7,6 @@ import {
   useRef,
 } from 'react'
 import cx from 'classnames'
-import Editor from '@monaco-editor/react'
 import { getValue, setValue } from './utils/objects'
 import styles from './formGenerator.module.scss'
 import {
@@ -261,7 +260,7 @@ const FormGenerator = <T extends Record<string, any>>(
               <Fragment key={newKeychainStr}>
                 {currLabel()}
                 <div className={getClassname(cx('mb-3', styles.editorWrapper))}>
-                  <Editor
+                  <currVal._instance
                     height="13em"
                     language={currVal._language}
                     theme="vs-dark"
@@ -279,6 +278,7 @@ const FormGenerator = <T extends Record<string, any>>(
                 </div>
               </Fragment>
             )
+            // }
           } else if (isSelectOptions(currKeyword, currVal)) {
             const assocPayloads: [number, Seed][] = getAssocPayloads(
               currVal,

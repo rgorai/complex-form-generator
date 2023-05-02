@@ -1,3 +1,6 @@
+import { MemoExoticComponent } from 'react'
+import { EditorProps } from '@monaco-editor/react'
+
 export declare global {
   type Keywords = {
     $useTextArea: Record<string, string>
@@ -7,6 +10,7 @@ export declare global {
       {
         _value: string
         _language: MonacoLanguages
+        _instance: MemoExoticComponent<(props: EditorProps) => JSX.Element>
       }
     >
     $useSelectOptions: Record<

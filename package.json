@@ -28,6 +28,7 @@
     "deploy": "yarn build && yarn publish"
   },
   "peerDependencies": {
+    "@monaco-editor/react": "^4.5.0",
     "bootstrap": ">=5",
     "react": ">=18"
   },
@@ -37,11 +38,13 @@
     },
     "bootstrap": {
       "optional": true
+    },
+    "@monaco-editor/react": {
+      "optional": true
     }
   },
   "dependencies": {},
   "devDependencies": {
-    "@monaco-editor/react": "^4.5.0",
     "@rgorai/eslint-config": "^1.0.19",
     "@rollup/plugin-commonjs": "^24.1.0",
     "@rollup/plugin-node-resolve": "^15.0.2",

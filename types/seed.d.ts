@@ -4,9 +4,9 @@ export declare global {
   type SeedValue = Primitives | Seed | Seed[]
 
   type Seed = {
-    [key: string]: SeedValue
-  } & {
     [key in keyof Keywords]?: Keywords[key]
+  } & {
+    [key: string]: any
   }
 
   type Keychain = (string | number)[]
