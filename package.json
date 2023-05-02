@@ -21,7 +21,8 @@
   "files": [
     "dist",
     "types",
-    "LICENSE"
+    "LICENSE",
+    "README.md"
   ],
   "scripts": {
     "build": "rm -rf dist && tsc && rollup -c",

@@ -6,7 +6,7 @@ This package allows you to generate a form with a special seed object in React b
 This is a React component, so you will need `"react": ">=18"`. If you want to use the shipped styles, you will need `"bootstrap": ">=5"`. If you would like to use code editor inputs, you will need `"@monaco-editor/react": "^4.5.0"`.
 
 ## Demo
-Please visit <a href="@@@DEMO_SITE" target="_blank" referrerPolicy="no-referrer">my NPM platform</a> to view a demo of this package.
+Please visit <a href="@@@DEMO_SITE">my NPM platform</a> to view a demo of this package.
 
 ## Installation
 
@@ -144,18 +144,21 @@ string
 <br>
 
 #### `$useCodeArea`
-Render a code editor. It uses Monaco Editor React, you can read their docs <a href="https://www.npmjs.com/package/@monaco-editor/react" target="_blank" referrerPolicy="no-referrer">here</a>.
+Render a code editor. It uses Monaco Editor React, you can read their docs <a href="https://www.npmjs.com/package/@monaco-editor/react" target="_blank" referrerPolicy="no-referrer">here</a>. You will need to import it yourself if supply it to the `_instance` field.
 ##### Spec type:
 ```javascript
 { 
   $useCodeArea: {
     _value: string,
     _language: MonacoLanguages
+    _instance: MemoExoticComponent<(props: EditorProps) => JSX.Element>
   }
 }
 ```
 ##### Ex:
 ```javascript
+import Editor from '@monaco-editor/react'
+
 { 
   $useCodeArea: {
     codeArea: {
@@ -163,6 +166,7 @@ Render a code editor. It uses Monaco Editor React, you can read their docs <a hr
 for e in list:
     print(e)`,
       _language: 'python',
+      _instance: Editor
     },
   },
 }
