@@ -1,8 +1,8 @@
 # Complex Form Generator
 
-This package allows you to generate a form with a special seed object in React based on a complex JS object that you need user input for. Object keys of the seed are used as input labels, and each key's value is used to infer the type of input. This means strings, numbers, booleans, nested objects, and certain configurations of nested arrays are fair game as object value types. Apart from these, there is a seed API to support a handful of custom input types. It also ships with Bootstrap 5 styling.
+This package allows you to generate a form with a special seed object in React based on a simple or complex JS object that you need user input for. Object keys of the seed are used as input labels, and each key's value is used to infer the type of input. This means strings, numbers, booleans, nested objects, and certain configurations of nested arrays are fair game as object value types. Apart from these, there is a seed API to support a handful of custom input types. It also ships with Bootstrap 5 styling.
 
-## Prequisites
+## Prerequisites
 This is a React component, so you will need `"react": ">=18"`. If you want to use the shipped styles, you will need `"bootstrap": ">=5"`. If you would like to use code editor inputs, you will need `"@monaco-editor/react": "^4.5.0"`.
 
 ## Demo
@@ -265,7 +265,7 @@ To use the FormGenerator component, simply provide the required seed obejct prop
       <td>Enables Bootstrap's floating labels for each input instead of a standard label/input setup.</td>
     </tr>
     <tr>
-      <td>groupNestedChildren</td>
+      <td>groupNestedObjects</td>
       <td><code>boolean</code></td>
       <td>false</td>
       <td>Visually groups all nested objects with a card outline. This applies to JS object values, array values, and select options values if any of the options has an associated payload.</td>
