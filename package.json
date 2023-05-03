@@ -1,6 +1,6 @@
 {
   "name": "complex-form-generator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Customize and generate React forms for complex payloads",
   "homepage": "https://rgorai-npm-packages.netlify.app/complex-form-generator",
   "repository": "https://github.com/rgorai/complex-form-generator",
