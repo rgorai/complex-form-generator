@@ -23,7 +23,7 @@ npm install complex-form-generator
 ## Usage
 
 ### Creating a seed object
-To create a seed object, simply start with the default state of the payload you need. Consider the rather simple payload named <code>SEED</code> provided in the example below. This payload as-is will generate a form with input tag types inferred from each key's value type, and labels generated from the keynames. For more complex input types, you can use special <a href="#keywords">keywords</a> outlined below.
+To create a seed object, simply start with the default state of the payload you need. Consider the rather simple payload named <code>SEED</code> provided in the example below. This payload as-is will generate a form with input tag types inferred from each key's value type, and labels generated from the keynames. For more complex input types, you can use special <a href="#keywords">keywords</a> outlined below. It is strongly recommended to use the <code>Seed</code> type when writing your seed object to be able to easily enter correct keyword parameters.
 
 ### Instantiating the component
 Once your seed is written, simply supply it to the FormGenerator component, and use the onChange/onSubmit methods to read the parsed payload from the form. Information on additional <a href="#component-api">props</a> can be found below.
