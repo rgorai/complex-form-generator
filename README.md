@@ -147,12 +147,10 @@ string
 Render a code editor. It uses Monaco Editor React, you can read their docs <a href="https://www.npmjs.com/package/@monaco-editor/react" target="_blank" referrerPolicy="no-referrer">here</a>. You will need to import it yourself if supply it to the `_instance` field.
 ##### Spec type:
 ```javascript
-{ 
-  $useCodeArea: {
-    _value: string,
-    _language: MonacoLanguages
-    _instance: MemoExoticComponent<(props: EditorProps) => JSX.Element>
-  }
+{
+  _value: string,
+  _language: MonacoLanguages
+  _instance: MemoExoticComponent<(props: EditorProps) => JSX.Element>
 }
 ```
 ##### Ex:
